@@ -1,0 +1,263 @@
+/* createfood.css */
+
+* {
+    box-sizing: border-box;
+}
+
+.create-food-page {
+    min-height: 100vh;
+    width: 100%;
+    background: #0b132b;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 35px;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+
+/* Main card */
+.create-food-card {
+    width: 310px;
+    background: #16213e;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+
+/* Header */
+.create-food-title {
+    color: #f1f5f9;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.create-food-subtitle {
+    color: #8b97ad;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+
+/* Labels */
+.field-group label {
+    display: block;
+    color: #9aa7bd;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+
+/* Upload area */
+.file-dropzone {
+    height: 110px;
+    background: #1b2947;
+    border: 1px dashed #263b61;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+
+.file-dropzone:hover {
+    border-color: #3b82f6;
+}
+
+
+.file-dropzone-inner {
+    text-align: center;
+    color: #8ea0bd;
+}
+
+
+.file-icon {
+    color: #4f8cff;
+    margin-bottom: 10px;
+}
+
+
+.file-dropzone-text {
+    font-size: 12px;
+    color: #c4cee0;
+}
+
+
+.file-dropzone-text strong {
+    color: white;
+}
+
+
+.file-hint {
+    margin-top: 8px;
+    font-size: 10px;
+    color: #718096;
+}
+
+
+.file-input-hidden {
+    display: none;
+}
+
+
+/* Inputs */
+.field-group input,
+.field-group textarea {
+
+    width: 100%;
+    background: #1b2947;
+    border: 1px solid #24395e;
+
+    color: white;
+
+    padding: 11px;
+    border-radius: 2px;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+
+.field-group input::placeholder,
+.field-group textarea::placeholder {
+    color: #66758f;
+}
+
+
+.field-group input:focus,
+.field-group textarea:focus {
+    border-color: #3b82f6;
+}
+
+
+/* spacing */
+.field-group {
+    margin-bottom: 16px;
+}
+
+
+textarea {
+    resize: none;
+    height: 85px;
+}
+
+
+/* Video preview */
+.video-preview {
+    margin: 12px 0;
+}
+
+
+.video-preview-el {
+    width: 100%;
+    border-radius: 3px;
+}
+
+
+/* Uploaded file chip */
+.file-chip {
+
+    background:#1b2947;
+    padding:10px;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:#cbd5e1;
+
+    font-size:11px;
+    margin-top:10px;
+
+}
+
+
+.file-chip-name {
+    flex:1;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+
+.file-chip-size {
+    color:#718096;
+}
+
+
+.btn-ghost {
+
+    background:none;
+    border:none;
+
+    color:#60a5fa;
+
+    cursor:pointer;
+    font-size:11px;
+
+}
+
+
+.btn-ghost.danger {
+    color:#ef4444;
+}
+
+
+/* Save button */
+.form-actions {
+    margin-top:10px;
+}
+
+
+.btn-primary {
+
+    background:#2563eb;
+
+    border:none;
+
+    color:white;
+
+    padding:10px 18px;
+
+    font-size:12px;
+
+    cursor:pointer;
+
+    border-radius:2px;
+
+    transition:.2s;
+}
+
+
+.btn-primary:hover {
+    background:#1d4ed8;
+}
+
+
+.btn-primary:disabled {
+
+    background:#334155;
+
+    cursor:not-allowed;
+
+}
+
+
+/* Error */
+.error-text {
+
+    color:#f87171;
+
+    font-size:11px;
+
+    margin-top:8px;
+
+}

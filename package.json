@@ -1,0 +1,12 @@
+{
+  "name": "instamato",
+  "private": true,
+  "workspaces": [
+    "back",
+    "front/vite-project"
+  ],
+  "scripts": {
+    "build": "npm --prefix front/vite-project run build",
+    "start:api": "npm --workspace=back start"
+  }
+}

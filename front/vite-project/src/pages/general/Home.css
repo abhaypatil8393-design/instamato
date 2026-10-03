@@ -1,0 +1,222 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for all reels */
+.reels-page {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  background: #000;
+}
+
+.reels-page::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for clean look */
+}
+
+/* Feed wrapper */
+.reels-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Each reel section */
+.reel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+/* Video styling */
+.reel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay container */
+.reel-overlay {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Gradient for readability */
+.reel-overlay-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  pointer-events: none;
+}
+
+/* Overlay content */
+.reel-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Description text */
+.reel-description {
+  color: #fff;
+  font-size: 16px;
+  line-height: 6;
+
+  display: -webkit-bo;
+  -webkit-line-clamp: 2; /* Max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Visit Partner button */
+.reel-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.reel-btn:hover {
+  background: #f0f0f0;
+}
+
+/* Sidebar for Reels interaction buttons */
+.reel-sidebar {
+  position: absolute;
+  right: 16px;
+  bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 10;
+}
+
+/* Circular action button base */
+.action-btn {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 0;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.action-btn:active {
+  transform: scale(0.9);
+}
+
+/* SVG icons within the button */
+.action-icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s ease;
+}
+
+/* Count labels */
+.action-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-top: 4px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: -18px;
+}
+
+/* Active Heart Style (Liked) */
+.like-btn.active {
+  color: #ef4444; /* red-500 */
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.15);
+  animation: heart-beat 0.35s ease-out;
+}
+
+.like-btn.active .action-icon {
+  fill: #ef4444;
+  stroke: #ef4444;
+}
+
+/* Active Bookmark Style (Saved) */
+.save-btn.active {
+  color: #38bdf8; /* sky-400 */
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.15);
+  animation: bookmark-pop 0.35s ease-out;
+}
+
+.save-btn.active .action-icon {
+  fill: #38bdf8;
+  stroke: #38bdf8;
+}
+
+/* Micro-animations for high feedback feel */
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes bookmark-pop {
+  0% {
+    transform: scale(1);
+    transform: translateY(0);
+  }
+  40% {
+    transform: scale(1.2);
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: scale(1.1);
+    transform: translateY(0);
+  }
+}
+
